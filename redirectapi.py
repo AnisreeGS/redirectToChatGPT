@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+import openai
 
 app = Flask(__name__)
 
@@ -13,4 +14,4 @@ def ask():
     return render_template("answer.html", question=question, answer=answer)
 
 if __name__ =="__main__":
-    app.run(port="5000")
+    app.redirect()
